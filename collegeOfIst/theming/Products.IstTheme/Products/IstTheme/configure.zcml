@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           i18n_domain="Products.IstTheme">
+
+    <genericsetup:registerProfile
+        name="default"
+        title="IstTheme"
+        directory="profiles/default"
+        description="Theme product for College of Information Sciences and Technology"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>
