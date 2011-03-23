@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins" default_skin="Ist Theme">
+    <object name="ist_theme_images" 
+        meta_type="Filesystem Directory View"
+        directory="Products.IstTheme:skins/ist_theme_images" />
+    <object name="ist_theme_javascript" 
+        meta_type="Filesystem Directory View"
+        directory="Products.IstTheme:skins/ist_theme_javascript" />
+    <object name="ist_theme_scripts" 
+        meta_type="Filesystem Directory View"
+        directory="Products.IstTheme:skins/ist_theme_scripts" />
+    <object name="ist_theme_styles" 
+        meta_type="Filesystem Directory View"
+        directory="Products.IstTheme:skins/ist_theme_styles" />
+    <object name="ist_theme_templates" 
+        meta_type="Filesystem Directory View"
+        directory="Products.IstTheme:skins/ist_theme_templates" />
+
+    <skin-path name="Ist Theme" based-on="Plone Default">
+        <layer name="ist_theme_images" insert-after="custom"/>
+        <layer name="ist_theme_javascript" insert-after="ist_theme_images"/>
+        <layer name="ist_theme_scripts" insert-after="ist_theme_javascript"/>     
+        <layer name="ist_theme_styles" insert-after="ist_theme_scripts"/>
+        <layer name="ist_theme_templates" insert-after="ist_theme_styles"/>
+    </skin-path>
+</object>

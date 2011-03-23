@@ -1,0 +1,49 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="Products.IstTheme">
+
+  <!-- 'Ist Theme' Zope 3 browser layer -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="Ist Theme"
+      />
+
+  <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="Products.IstTheme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"          
+        />
+
+  <!-- Resource directory for styles -->
+    <browser:resourceDirectory
+        name="Products.IstTheme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"          
+        />
+
+  <!-- Resource directory for templates -->
+    <browser:resourceDirectory
+        name="Products.IstTheme.templates"
+        directory="templates"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+  <!-- Viewlets registration -->
+  <!-- Zope 3 browser resources -->
+  
+  <!-- IstTheme Footer -->
+  <browser:viewlet
+     name="Products.IstTheme.footer"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     layer=".interfaces.IThemeSpecific"
+     template="templates/footer.pt"
+     permission="zope2.View"
+   />
+
+</configure>
+
+
