@@ -1,14 +1,25 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-           i18n_domain="Products.IstTheme">
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="Products.IstTheme">
 
     <genericsetup:registerProfile
         name="default"
         title="IstTheme"
         directory="profiles/default"
-        description="Theme product for College of Information Sciences and Technology"
+        description="Theme product for College of Information Sciences and Technology."
         provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+     /> 
+
+    <five:registerPackage package="." initialize=".initialize" />
+    <include package=".browser" />
+    <cmf:registerDirectory name="ist_theme_images" />
+    <cmf:registerDirectory name="ist_theme_javascript" />
+    <cmf:registerDirectory name="ist_theme_scripts" />
+    <cmf:registerDirectory name="ist_theme_styles" />
+    <cmf:registerDirectory name="ist_theme_templates" />
 
 </configure>
 

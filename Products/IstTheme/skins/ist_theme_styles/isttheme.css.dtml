@@ -1,0 +1,12 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* DELETE THIS LINE AND PUT YOUR CSS STUFF HERE */
+
+body {
+   background-color: red;
+   /* let's add some CSS a test to see if this works. You can adjust this later */
+}
+ 
+
+/* </dtml-with> */
